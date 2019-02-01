@@ -22066,6 +22066,8 @@ in
 
   ### SCIENCE / MISC
 
+  astrochem = callPackage ../applications/science/astrochem { };
+
   boinc = callPackage ../applications/science/misc/boinc { };
 
   celestia = callPackage ../applications/science/astronomy/celestia {

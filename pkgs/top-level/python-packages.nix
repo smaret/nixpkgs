@@ -953,6 +953,8 @@ in {
 
   asn1ate = callPackage ../development/python-modules/asn1ate { };
 
+  astrochem = toPythonModule (pkgs.astrochem.override { pythonPackages = self; });
+
   atomiclong = callPackage ../development/python-modules/atomiclong { };
 
   atomicwrites = callPackage ../development/python-modules/atomicwrites { };
