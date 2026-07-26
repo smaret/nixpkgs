@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  gtk2-x11,
+  gtk3,
   pkg-config,
   python3,
   gfortran,
@@ -48,7 +48,7 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
-    gtk2-x11
+    gtk3
     cfitsio
     python3Env
     ncurses
@@ -105,7 +105,7 @@ stdenv.mkDerivation rec {
       extensible. GILDAS is written in Fortran-90, with a
       few parts in C/C++ (mainly keyboard interaction,
       plotting, widgets).'';
-    homepage = "http://www.iram.fr/IRAMFR/GILDAS/gildas.html";
+    homepage = "https://www.iram.fr/IRAMFR/GILDAS/";
     license = lib.licenses.free;
     maintainers = [
       lib.maintainers.bzizou
