@@ -3,6 +3,8 @@
   stdenv,
   fetchurl,
   gtk3,
+  gtk3-x11,
+  gtk3' ? (if stdenv.hostPlatform.isDarwin then gtk3-x11 else gtk3),
   pkg-config,
   python3,
   gfortran,
@@ -48,7 +50,7 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
-    gtk3
+    gtk3'
     cfitsio
     python3Env
     ncurses
